@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Herzlich Willkommen bei EasyArt90</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            #background: url("Bilder/hintergrund.jpg") no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+        }   
+
+        h1 {
+            color: #e1e2e7;
+            font-size: 4em; 
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 0px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .zeit {
+            font-size: 1.3em;
+            margin-top: 30px;
+            color: #eee;
+            text-shadow: 1px 1px 2px rgba(45, 181, 24, 0.5);
+        }
+
+        .emoji {
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #ccc;
+            font-size: 1.1em;
+        }
+
+        footer img {
+            margin-top: 20px;
+            width: 150px;
+            opacity: 0.9;
+        }
+    </style>
+    </head>
+    <body>
+    <h1>Herzlich Willkommen bei <strong>EasyArt90</strong>!</h1>
+    <div class="emoji">🫡🫡🫡😁😁✅✅🔊📣</div>
+    <p>Diese Webseite ist neu und steht in Bearbeitung.</p>
+    <div class="zeit">
+        <strong>Aktuelle Zeit:</strong> <span id="zeitfeld"></span>
+    </div>
+
+    <footer>
+        <img src="Bilder/logo.png" alt="EasyArt90 Logo" width="auto">
+        <div style="color: #000000;">Mahabad-Kurdistan</div>
+        &copy; 2025 EasyArt90 – Alle Rechte vorbehalten <br>
+    </footer>
+
+    <script>
+        function zeigeZeit() {
+            const jetzt = new Date();
+            const datum = jetzt.toLocaleDateString('de-DE');
+            const uhrzeit = jetzt.toLocaleTimeString('de-DE');
+            document.getElementById('zeitfeld').textContent = datum + ' – ' + uhrzeit;
+        }
+
+        zeigeZeit(); // Initial anzeigen
+        setInterval(zeigeZeit, 1000); // Jede Sekunde aktualisieren
+    </script>
+</body>
+</html>
+<!-- End of easyart90.de/index.html -->
+
